@@ -1,0 +1,16 @@
+@import "@/scss/_variables.scss";
+
+.next-step-button {
+  background: $purpulishBlue;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background: $marineBlue;
+  }
+}

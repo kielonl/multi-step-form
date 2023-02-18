@@ -1,0 +1,60 @@
+@import "@/scss/_variables.scss";
+.switch {
+  display: inline-block;
+  height: 22px;
+  position: relative;
+  width: 40px;
+}
+
+.slider-container {
+  font-weight: 700;
+  color: $marineBlue;
+  background: $magnolia;
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.unchecked {
+  color: gray;
+}
+.switch input {
+  display: none;
+}
+
+.slider {
+  background-color: $marineBlue;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  background: $white;
+  bottom: 4px;
+  content: "";
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  height: 13px;
+  width: 13px;
+}
+
+input:checked + .slider:before {
+  transform: translateX(18px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

@@ -1,0 +1,41 @@
+@import "@/scss/_variables.scss";
+.summary {
+  background: $alabaster;
+  border-radius: 10px;
+  padding: 1rem;
+
+  .main-costs {
+    text-transform: capitalize;
+
+    .plan-cost {
+      display: flex;
+      justify-content: space-between;
+    }
+    .change {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+  .additional-cost-container {
+    .additional-cost {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1rem;
+    }
+  }
+}
+.total-price {
+  font-weight: 700;
+  margin: 1rem;
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  & div:nth-child(1) {
+    font-size: 16px;
+    color: $coolGray;
+  }
+  & div:nth-child(2) {
+    color: $marineBlue;
+  }
+}

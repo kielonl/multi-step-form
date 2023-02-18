@@ -1,0 +1,145 @@
+@import "@/scss/_variables.scss";
+.multi-form-container {
+  min-height: 35rem;
+  display: grid;
+  grid-template-columns: 0.7fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  p {
+    min-width: 30rem;
+    max-width: 30rem;
+  }
+  .bg-sidebar-container {
+    grid-area: 1 / 1 / 2 / 2;
+
+    .form-steps {
+      display: flex;
+      flex-direction: column;
+      color: white;
+      position: relative;
+      height: 100%;
+      z-index: 1;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("@/assets/bgSidebarDesktop.svg");
+        background-repeat: no-repeat;
+        border-radius: 10px;
+        z-index: -1;
+      }
+
+      .step {
+        padding: 1rem;
+        display: flex;
+        flex-direction: row;
+
+        .right-side {
+          margin-left: 1rem;
+          line-height: 1.2rem;
+          .title {
+            font-size: 15px;
+            font-weight: 200;
+            color: $coolGray;
+          }
+        }
+      }
+
+      .step-number {
+        height: 1rem;
+        width: 1rem;
+        border: 1px solid white;
+        border-radius: 2rem;
+        padding: 0.5rem;
+        text-align: center;
+        cursor: pointer;
+      }
+      .selected {
+        background: $lightBlue;
+        border-color: $lightBlue;
+        color: $marineBlue;
+      }
+    }
+  }
+  .form-container {
+    grid-area: 1 / 2 / 2 / 3;
+    padding-right: 5rem;
+    position: relative;
+
+    .navigation-container {
+      width: 100%;
+      bottom: 0;
+
+      position: absolute;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .multi-form-container {
+    background: $lightGray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem;
+    height: 100vh;
+    p {
+      min-width: 0;
+    }
+    .bg-sidebar-container {
+      width: 100%;
+      height: 100%;
+      grid: none;
+      position: absolute;
+
+      .form-steps {
+        flex-direction: row;
+        justify-content: center;
+        &::after {
+          background-image: url("@/assets/bgSidebarMobile.svg");
+          background-repeat: no-repeat;
+          border-radius: 0;
+        }
+      }
+    }
+    .step .right-side {
+      display: none;
+    }
+
+    .form-container {
+      background: $white;
+      padding: 1rem;
+
+      margin: 1rem 1rem 1rem 1rem;
+      border-radius: 10px;
+      z-index: 1;
+      position: unset;
+    }
+  }
+  .navigation-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: $white;
+    button {
+      margin: 1rem 1rem 1rem 1rem;
+    }
+  }
+}
+
+.hidden {
+  opacity: 0;
+  cursor: none;
+}

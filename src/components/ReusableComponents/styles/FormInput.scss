@@ -1,0 +1,27 @@
+@import "@/scss/_variables.scss";
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin: 2.5rem 0rem 2.5rem 0rem;
+  color: $marineBlue;
+
+  input {
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    border: 1px solid $lightGray;
+    font-size: 16px;
+    margin-top: 0.5rem;
+
+    &:focus {
+      outline: none;
+      border: 1px solid $purpulishBlue;
+    }
+  }
+  .error {
+    border-color: $strawberryRed;
+    &:focus {
+      border-color: $strawberryRed;
+    }
+  }
+}

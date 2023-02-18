@@ -1,0 +1,12 @@
+@import "@/scss/_variables.scss";
+
+.prev-step-button {
+  color: $coolGray;
+  border: none;
+  background: none;
+  font-size: 1rem;
+  cursor: pointer;
+  &:hover {
+    color: $purpulishBlue;
+  }
+}

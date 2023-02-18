@@ -1,0 +1,7 @@
+@import url("https://fonts.google.com/specimen/Ubuntu");
+html,
+body {
+  font-family: "Ubuntu", sans-serif;
+  padding: 0;
+  margin: 0;
+}

@@ -1,0 +1,11 @@
+@import "@/scss/variables.scss";
+
+.step-container {
+  h1 {
+    font-weight: 700;
+    color: $marineBlue;
+  }
+  p {
+    color: $coolGray;
+  }
+}
